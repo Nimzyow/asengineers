@@ -17,6 +17,11 @@ const App = () => {
       <div className="body">
         <div className="message">
           <h3>AS Engineers website currently under construction</h3>
+          <h6>
+            If you're planning on improving your home through renovation,
+            extensions, loft conversions, or whatever else, please email us at
+            info@cengineers.co.uk or call us on 0208 598 1998
+          </h6>
         </div>
       </div>
       <div className="main">
