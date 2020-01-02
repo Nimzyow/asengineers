@@ -1,0 +1,34 @@
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.triangle-topleft {
+  position: "relative";
+  width: 0;
+  height: 0;
+  border-top: 600px solid #eff3f6;
+  border-right: 1800px solid transparent;
+}
+
+.imageStyle {
+  width: 100%;
+  height: 110%;
+}
+
+.imageStyle2 {
+  width: 90%;
+  height: 110%;
+  margin-right: 10px;
+}
+
+.HeroTitle {
+  font-weight: bold;
+  color: #4a4a4a;
+}
+.HeroTitle.Blue {
+  color: blue;
+}

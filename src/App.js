@@ -1,10 +1,16 @@
 import React, { Fragment, useEffect } from "react";
 import NavBar from "./components/ui/navbar/NavBar";
 import Footer from "./components/ui/footer/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 import "./App.css";
+
+import Home from "./components/pages/home/Home";
+import Architectural from "./components/pages/architectural/Architectural";
+import Structural from "./components/pages/structural/Structural";
+import Contact from "./components/pages/contact/Contact";
 
 const App = () => {
   useEffect(() => {
@@ -12,22 +18,22 @@ const App = () => {
     M.AutoInit();
   });
   return (
-    <Fragment>
-      <NavBar />
-      <div className="body">
-        <div className="message">
-          <h3>AS Engineers website currently under construction</h3>
-          <h6>
-            If you're planning on improving your home through renovation,
-            extensions, loft conversions, or whatever else, please email us at
-            info@cengineers.co.uk or call us on 0208 598 1998
-          </h6>
+    <Router>
+      <Fragment>
+        <NavBar />
+        <div className="body">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/architectural" component={Architectural} />
+            <Route exact path="/structural" component={Structural} />
+            <Route exact path="/contact" component={Contact} />
+          </Switch>
         </div>
-      </div>
-      <div className="main">
-        <Footer />
-      </div>
-    </Fragment>
+        <div className="main">
+          <Footer />
+        </div>
+      </Fragment>
+    </Router>
   );
 };
 

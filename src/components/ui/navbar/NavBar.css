@@ -1,0 +1,10 @@
+.height {
+  height: 120px;
+}
+.no-shadows {
+  box-shadow: none !important;
+}
+
+.color {
+  background-color: #eff3f6;
+}

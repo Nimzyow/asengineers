@@ -1,23 +1,23 @@
 import React from "react";
+import "./NavBar.css";
+import Logo from "./Logo";
+import NavBarItem from "./NavBarItem";
 
 const NavBar = () => {
   return (
-    <nav className="nav-wrapper blue darken-3" data-test="component-navbar">
-      <a href="#" className="brand-logo">
-        AS Engineers
-      </a>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li>
-          <a href="sass.html">Architectural</a>
-        </li>
-        <li>
-          <a href="badges.html">Structural</a>
-        </li>
-        <li>
-          <a href="collapsible.html">Other</a>
-        </li>
-      </ul>
-    </nav>
+    <div className="navbar-fixed">
+      <nav className="no-shadows">
+        <div
+          className="nav-wrapper color darken-3"
+          data-test="component-navbar"
+        >
+          <Logo />
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <NavBarItem />
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 };
 
